@@ -1,0 +1,62 @@
+.nav {
+  height: 10vh;
+}
+
+.bgHero {
+  position: absolute;
+
+  top: -200px;
+  left: 0;
+
+  width: 100%;
+  height: 90vh;
+
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+.svgBg {
+}
+
+@media screen and (max-width: 960px) {
+  .svgBg {
+    transform: scale(2) rotate(25deg);
+  }
+}
+
+.hero {
+  height: 90vh;
+}
+
+.square {
+  display: inline-block;
+  padding: 16px 16px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 1;
+}
+
+.square::after {
+  content: "";
+  display: block;
+
+  z-index: -1;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(225deg, #c33333 0%, rgba(173, 42, 42, 0) 100%);
+  transform: translate(-32%, -57%) rotate(45deg);
+
+  transition: 1s;
+}
+
+.square:hover::after {
+  transform: translate(-32%, -57%) rotate(405deg);
+}
